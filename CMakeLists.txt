@@ -1,2 +1,2 @@
-project(ITKExternalTemplate)
+project(ITKBinaryMorphologyPerformance)
 itk_module_impl()
