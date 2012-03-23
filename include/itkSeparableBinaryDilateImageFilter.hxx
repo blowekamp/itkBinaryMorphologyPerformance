@@ -27,8 +27,6 @@ template< class TInputImage, class TOutputImage, class TKernel >
 SeparableBinaryDilateImageFilter< TInputImage, TOutputImage, TKernel >
 ::SeparableBinaryDilateImageFilter()
 {
-  this->m_ForegroundValue = NumericTraits< InputPixelType >::max();
-  this->m_BackgroundValue = NumericTraits< OutputPixelType >::NonpositiveMin();
   this->m_BoundaryToForeground = false;
 }
 

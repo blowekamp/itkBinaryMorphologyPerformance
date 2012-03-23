@@ -1,4 +1,3 @@
-
 /*=========================================================================
  *
  *  Copyright Insight Software Consortium
@@ -30,7 +29,6 @@ template< class TInputImage, class TOutputImage, class TKernel >
 SeparableBinaryMorphologyImageFilter< TInputImage, TOutputImage, TKernel >
 ::SeparableBinaryMorphologyImageFilter()
 {
-  this->m_BoundaryToForeground = false;
   this->m_Direction = 0;
 }
 
@@ -247,12 +245,6 @@ SeparableBinaryMorphologyImageFilter< TInputImage, TOutputImage, TKernel >
 ::PrintSelf(std::ostream & os, Indent indent) const
 {
   Superclass::PrintSelf(os, indent);
-  os << indent << "Foreground Value: "
-     << static_cast< typename NumericTraits< InputPixelType >::PrintType >( m_ForegroundValue ) << std::endl;
-  os << indent << "Background Value: "
-     << static_cast< typename NumericTraits< OutputPixelType >::PrintType >( m_BackgroundValue ) << std::endl;
-
-  os << indent << "BoundaryToForeground: " << m_BoundaryToForeground << std::endl;
   os << indent << "Direction: " << m_Direction << std::endl;
 }
 } // end namespace itk
